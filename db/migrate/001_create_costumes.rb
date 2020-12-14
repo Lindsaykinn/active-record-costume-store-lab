@@ -1,4 +1,16 @@
 # Create a class and inherit from ActiveRecord::Migration
+class CreateCostumes < ActiveRecord::Migration[5.2]
+    def change
+        create_table :costumes do |t|
+            t.string :name
+            t.string :price
+            t.string :image_url
+            t.string :size
+            t.datetime :created_at
+            t.datetime :updated_at
+        end
+    end
+end
 
 # By convention, the class name should match the part of the
 # file name after the number, so in this case:
